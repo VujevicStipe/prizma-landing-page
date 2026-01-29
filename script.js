@@ -245,7 +245,7 @@ if (form) {
 
 document.querySelectorAll('.btn-primary').forEach(btn => {
     btn.addEventListener('mouseenter', function() {
-        gsap.to(this, { scale: 1.02, duration: 0.2 });
+        gsap.to(this, { scale: 1.01, duration: 0.2 });
     });
     btn.addEventListener('mouseleave', function() {
         gsap.to(this, { scale: 1, duration: 0.3 });
@@ -264,5 +264,3 @@ window.addEventListener('load', () => {
 window.addEventListener('resize', () => {
     ScrollTrigger.refresh();
 });
-
-console.log('%c🚚 PRIZMA Distribution', 'color: #10B981; font-size: 18px; font-weight: bold;');
