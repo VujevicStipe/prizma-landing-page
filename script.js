@@ -217,6 +217,22 @@ gsap.fromTo('.contact-grid',
         }
     }
 );
+
+function capitalizeWords(input) {
+    return input.value
+        .toLowerCase()
+        .split(' ')
+        .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+        .join(' ');
+}
+
+const nameInput = document.querySelector('input[name="name"]');
+if (nameInput) {
+    nameInput.addEventListener('blur', function() {
+        this.value = capitalizeWords(this);
+    });
+}
+
 emailjs.init("TjBDVHLjkgMXbSlVN");
 
 const form = document.querySelector('.contact-form form');
