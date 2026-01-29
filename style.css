@@ -66,6 +66,11 @@ body {
     height: 36px;
 }
 
+.nav-logo a {
+    display: block;
+    line-height: 0;
+}
+
 .nav-menu {
     display: flex;
     gap: 2.5rem;
