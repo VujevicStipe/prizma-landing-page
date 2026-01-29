@@ -231,7 +231,7 @@ if (form) {
         
         emailjs.sendForm('service_2bhshaa', 'template_azi1nvl', this)
             .then(() => {
-                return emailjs.sendForm('service_2bhshaa', 'NOVI_TEMPLATE_ID', this);
+                return emailjs.sendForm('service_2bhshaa', 'template_2eftgtz', this);
             })
             .then(() => {
                 btn.textContent = 'Poslano ✓';
