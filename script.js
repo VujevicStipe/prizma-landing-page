@@ -217,6 +217,7 @@ gsap.fromTo('.contact-grid',
         }
     }
 );
+emailjs.init("TjBDVHLjkgMXbSlVN");
 
 const form = document.querySelector('.contact-form form');
 if (form) {
@@ -225,21 +226,29 @@ if (form) {
         
         const btn = this.querySelector('button');
         const originalText = btn.textContent;
-        
-        btn.disabled = true;
         btn.textContent = 'Šaljem...';
+        btn.disabled = true;
         
-        setTimeout(() => {
-            btn.textContent = 'Poslano ✓';
-            btn.style.background = '#10B981';
-            
-            setTimeout(() => {
+        emailjs.sendForm('service_2bhshaa', 'template_azi1nvl', this)
+            .then(() => {
+                return emailjs.sendForm('service_2bhshaa', 'NOVI_TEMPLATE_ID', this);
+            })
+            .then(() => {
+                btn.textContent = 'Poslano ✓';
+                btn.style.background = '#10B981';
                 this.reset();
-                btn.disabled = false;
+                
+                setTimeout(() => {
+                    btn.textContent = originalText;
+                    btn.style.background = '';
+                    btn.disabled = false;
+                }, 2000);
+            })
+            .catch((error) => {
+                alert('Greška: ' + error.text);
                 btn.textContent = originalText;
-                btn.style.background = '';
-            }, 2000);
-        }, 1500);
+                btn.disabled = false;
+            });
     });
 }
 
