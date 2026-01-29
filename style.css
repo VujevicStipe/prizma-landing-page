@@ -615,7 +615,7 @@ section {
 .info-icon {
     width: 48px;
     height: 48px;
-    background: var(--bg-light);
+    background: var(--bg-white);
     border-radius: var(--radius-md);
     display: flex;
     align-items: center;
@@ -649,13 +649,8 @@ section {
     text-decoration: none;
 }
 
-/* .info-item a:hover {
-    color: var(--primary);
-    text-decoration: underline;
-} */
-
 .contact-form {
-    background: var(--bg-light);
+    background: var(--bg-white);
     padding: 3rem;
     border-radius: var(--radius-lg);
 }
@@ -761,11 +756,9 @@ section {
     list-style: none;
 }
 
-.footer-links li {
-    margin-bottom: 0.8rem;
-}
-
+.footer-links li, 
 .footer-links a {
+    margin-bottom: 0.8rem;
     color: rgba(255, 255, 255, 0.7);
     text-decoration: none;
     font-size: 0.95rem;
@@ -854,6 +847,10 @@ section {
     .coverage-grid {
         grid-template-columns: 1fr;
         gap: 3rem;
+    }
+
+    .map-container {
+        min-height: auto;
     }
 }
 
