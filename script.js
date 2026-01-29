@@ -127,9 +127,8 @@ if (mapContainer) {
         renderer: 'svg',
         loop: false,
         autoplay: false,
-        path: 'https://lottie-repo.vercel.app/croatia-map-animation.json'
+        path: 'https://lottie-repo.vercel.app/whole-croatia-animation.json'
     });
-    
     ScrollTrigger.create({
         trigger: '.map-container',
         start: 'top 80%',
@@ -149,42 +148,42 @@ if(imageContainer) {
     const imageAnimation = lottie
 }
 
-const phoneContainer = document.getElementById('lottie-phone');
-if (phoneContainer) {
-    const phoneAnimation = lottie.loadAnimation({
-        container: phoneContainer,
-        renderer: 'svg',
-        loop: true,
-        autoplay: false,
-        path: 'https://lottie-repo.vercel.app/showreel-grid-prizma-app.json'
-    });
+// const phoneContainer = document.getElementById('lottie-phone');
+// if (phoneContainer) {
+//     const phoneAnimation = lottie.loadAnimation({
+//         container: phoneContainer,
+//         renderer: 'svg',
+//         loop: true,
+//         autoplay: false,
+//         path: 'https://lottie-repo.vercel.app/showreel-grid-prizma-app.json'
+//     });
 
-    ScrollTrigger.create({
-        trigger: '.app-grid',
-        start: 'top 70%',
-        once: true,
-        onEnter: () => {
-            setTimeout(() => {
-                phoneAnimation.play();
-            }, 500);
-        }
-    });
-}
+//     ScrollTrigger.create({
+//         trigger: '.app-grid',
+//         start: 'top 70%',
+//         once: true,
+//         onEnter: () => {
+//             setTimeout(() => {
+//                 phoneAnimation.play();
+//             }, 500);
+//         }
+//     });
+// }
 
-gsap.fromTo('.app-content',
-    { opacity: 0, y: 40 },
-    {
-        opacity: 1,
-        y: 0,
-        duration: 0.8,
-        ease: 'power2.out',
-        scrollTrigger: {
-            trigger: '.app-grid',
-            start: 'top 70%',
-            once: true
-        }
-    }
-);
+// gsap.fromTo('.app-content',
+//     { opacity: 0, y: 40 },
+//     {
+//         opacity: 1,
+//         y: 0,
+//         duration: 0.8,
+//         ease: 'power2.out',
+//         scrollTrigger: {
+//             trigger: '.app-grid',
+//             start: 'top 70%',
+//             once: true
+//         }
+//     }
+// );
 
 gsap.utils.toArray('.section-header').forEach(header => {
     gsap.fromTo(header.children,
