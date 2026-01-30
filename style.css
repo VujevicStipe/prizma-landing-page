@@ -812,6 +812,10 @@ section {
         padding: 0 1.5rem;
     }
     
+    .hero .container {
+        padding-top: 0;
+    }
+    
     .nav-menu {
         display: none;
     }
