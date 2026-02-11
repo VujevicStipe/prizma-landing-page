@@ -43,6 +43,14 @@ body {
     padding: 0 3rem;
 }
 
+img[title] {
+    position: relative;
+}
+
+img[title]:hover::after {
+    content: '';
+}
+
 .nav {
     position: fixed;
     top: 0;
